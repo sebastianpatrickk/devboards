@@ -8,3 +8,7 @@ export interface NavItem {
   href: string;
   label: string;
 }
+export interface DashboardNavItem {
+  href: string;
+  label: string;
+}
