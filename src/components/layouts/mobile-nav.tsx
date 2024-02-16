@@ -14,19 +14,13 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import { NavItem } from "@/types";
 import { Command } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Separator } from "../ui/separator";
 
-const navItems = [
-  { label: "Home", href: "/" },
-  { label: "Features", href: "/features" },
-  { label: "Pricing", href: "/pricing" },
-];
-
-export const MobileNav = () => {
+export const MobileNav = ({ navItemsData }: { navItemsData: NavItem[] }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const pathname = usePathname();
@@ -53,7 +47,7 @@ export const MobileNav = () => {
           </SheetTitle>
         </SheetHeader>
         <nav className="flex w-full flex-col gap-4 pt-6 text-sm">
-          {navItems.map((item) => (
+          {navItemsData.map((item) => (
             <MobileLink
               key={item.href}
               href={item.href}

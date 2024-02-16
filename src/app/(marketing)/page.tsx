@@ -1,38 +1,44 @@
 import Link from "next/link";
-
-import { Medal } from "lucide-react";
-
-import { cn } from "@/lib/utils";
+import { StarIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 const MarketingPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div className={cn("flex flex-col items-center justify-center")}>
-        <div className="mb-4 flex items-center rounded-full border bg-amber-100 p-4 uppercase text-amber-700 shadow-sm">
-          <Medal className="mr-2 h-6 w-6" />
+    <section className="container flex max-w-6xl items-center justify-center gap-8 pb-8 pt-6 md:py-8 ">
+      <section className="mx-auto flex w-full max-w-5xl flex-col items-center justify-center gap-4 py-12 text-center md:py-16">
+        <Badge variant="secondary" className="py-1.5">
+          <StarIcon className="mr-2 h-4 w-4" />
           No 1 task managment
-        </div>
-        <h1 className="mb-6 text-center text-3xl text-neutral-800 md:text-6xl">
-          Taskify helps team move
+        </Badge>
+
+        <h1 className="text-balance text-3xl font-bold sm:text-5xl md:text-6xl">
+          Portfolio app created using all the new in Next.js 14.
         </h1>
-        <div className="w-fit rounded-md bg-gradient-to-r from-fuchsia-600 to-pink-600 p-2 px-4 pb-4 text-3xl text-white md:text-6xl">
-          work forward.
+        <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
+          I created a trello like web app with Next.js 14. The documentation for
+          the app is on my GitHub
+        </p>
+        <div className="space-x-4">
+          <Button size="lg" asChild>
+            <Link href="/sign-up">Get started</Link>
+          </Button>
+          <Button variant="outline" size="lg" asChild>
+            <Link href="/sign-up">GitHub</Link>
+          </Button>
         </div>
-      </div>
-      <div
-        className={cn(
-          "mx-auto mt-4 max-w-xs text-center text-sm text-neutral-400 md:max-w-2xl md:text-xl",
-        )}
+      </section>
+
+      {/* <section
+        className="mx-auto flex w-full max-w-5xl flex-col items-center justify-center gap-16 pt-12 text-center md:pt-16"
+        id="features"
       >
-        Collaborate, manage projects, and reach new productivity peaks. From
-        high rises to the home office, the way your team works is unique -
-        accomplish it all with Taskify.
-      </div>
-      <Button className="mt-6" size="lg" asChild>
-        <Link href="/sign-up">Get Taskify for free</Link>
-      </Button>
-    </div>
+        <div className="spce-y-4">
+          <h1 className="text-3xl font-bold sm:text-5xl md:text-6xl"></h1>
+          <p className=" max-w-3xl leading-normal text-muted-foreground sm:text-xl sm:leading-8"></p>
+        </div>
+      </section> */}
+    </section>
   );
 };
 

@@ -5,8 +5,10 @@ const MarketingLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="relative flex min-h-screen flex-col">
       <PageHeader />
-      <main className="">{children}</main>
-      {/* <Footer /> */}
+      <main className="flex h-full w-full flex-1 items-center justify-center">
+        {children}
+      </main>
+      <Footer />
     </div>
   );
 };

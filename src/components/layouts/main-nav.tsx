@@ -5,14 +5,9 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { Command } from "lucide-react";
+import { NavItem } from "@/types";
 
-const navItems = [
-  { label: "Home", href: "/" },
-  { label: "Features", href: "/features" },
-  { label: "Pricing", href: "/pricing" },
-];
-
-export const MainNav = () => {
+export const MainNav = ({ navItemsData }: { navItemsData: NavItem[] }) => {
   const pathname = usePathname();
 
   return (
@@ -24,7 +19,7 @@ export const MainNav = () => {
         </div>
       </Link>
       <nav className="flex items-center gap-6 text-sm">
-        {navItems.map((item) => (
+        {navItemsData.map((item) => (
           <Link
             className={cn(
               "transition-colors hover:text-foreground/80",
