@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-
-const inter = Inter({ subsets: ["latin"] });
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: {
@@ -28,7 +27,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn("h-screen", inter.className)}>{children}</body>
+      <body
+        className={cn(
+          "min-h-screen bg-background antialiased",
+          GeistSans.className,
+        )}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

@@ -1,18 +1,12 @@
-import { Footer } from "./_components/footer";
-import { Navbar } from "./_components/navbar";
+import { Footer } from "../../components/layouts/footer";
+import { PageHeader } from "../../components/layouts/page-header";
 
-const MarketingLayout = ({
-  children
-}: {
-  children: React.ReactNode;
-}) => {
+const MarketingLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="h-full bg-slate-100">
-      <Navbar />
-      <main className="pt-40 pb-20 bg-slate-100">
-        {children}
-      </main>
-      <Footer />
+    <div className="relative flex min-h-screen flex-col">
+      <PageHeader />
+      <main className="">{children}</main>
+      {/* <Footer /> */}
     </div>
   );
 };
