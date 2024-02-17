@@ -15,7 +15,9 @@ const OrganizationIdLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <OrgControl />
-      {children}
+      <div className="grid items-center gap-8 pb-8 pt-6 md:py-8">
+        {children}
+      </div>
     </>
   );
 };

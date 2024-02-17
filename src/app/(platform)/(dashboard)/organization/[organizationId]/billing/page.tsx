@@ -3,7 +3,7 @@ import { Separator } from "@/components/ui/separator";
 
 import { SubscriptionButton } from "./_components/subscription-button";
 
-import { Info } from "../_components/info";
+import { Info } from "../../../../../../components/info";
 
 const BillingPage = async () => {
   const isPro = await checkSubscription();

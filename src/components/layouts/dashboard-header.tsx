@@ -1,16 +1,13 @@
 "use client";
 
-import Link from "next/link";
-
 import { Button } from "@/components/ui/button";
-import { MainNav } from "./main-nav";
-import { MobileNav } from "./mobile-nav";
 import { PlusIcon } from "@radix-ui/react-icons";
-import { Layout, Plus } from "lucide-react";
 import { DashboardNav } from "./dashboard-nav";
 import { UserButton, auth, useAuth, useClerk } from "@clerk/nextjs";
 import { Skeleton } from "../ui/skeleton";
 import { DashboardMobileNav } from "./dashboard-mobile-nav";
+import { CreateBoardDialog } from "../dialogs/create-board-dialog";
+import { ModeToggle } from "./mode-toggle";
 
 export const DashboardHeader = () => {
   const { orgId } = useAuth();
@@ -41,9 +38,12 @@ export const DashboardHeader = () => {
         <DashboardNav navItemsData={navItemsData} />
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="flex items-center space-x-2">
-            <Button size="icon" variant="outline">
-              <PlusIcon className="h-4 w-4" />
-            </Button>
+            <CreateBoardDialog>
+              <Button size="icon" variant="outline">
+                <PlusIcon className="h-4 w-4" />
+              </Button>
+            </CreateBoardDialog>
+            <ModeToggle />
             {loaded && <UserButton />}
             {!loaded && <Skeleton className="h-8 w-8 rounded-full" />}
           </nav>

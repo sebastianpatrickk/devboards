@@ -1,21 +1,20 @@
 import { Suspense } from "react";
-import { Separator } from "@/components/ui/separator";
-import { Info } from "./_components/info";
-import { BoardList } from "./_components/board-list";
+import { BoardList } from "@/components/board-list";
+import { Info } from "@/components/info";
 import { checkSubscription } from "@/lib/subscription";
+import { PlanInfo } from "@/components/plan-info";
 
 const OrganizationIdPage = async () => {
   const isPro = await checkSubscription();
 
   return (
-    <div className="mb-20 w-full">
+    <div className="container grid max-w-6xl items-center gap-8 pb-8 pt-6 md:py-8">
       <Info isPro={isPro} />
-      <Separator className="my-4" />
-      <div className="px-2 md:px-4">
-        <Suspense fallback={<BoardList.Skeleton />}>
-          <BoardList />
-        </Suspense>
-      </div>
+      <PlanInfo />
+
+      <Suspense fallback={<BoardList.Skeleton />}>
+        <BoardList />
+      </Suspense>
     </div>
   );
 };
