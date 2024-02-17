@@ -14,8 +14,8 @@ export const Footer = () => {
             target="_blank"
           >
             Sebastian Patrick Klen
-          </Link>
-          The source code is available on{" "}
+          </Link>{" "}
+          the source code is available on{" "}
           <Link
             className="text-medium underline underline-offset-2"
             href=""

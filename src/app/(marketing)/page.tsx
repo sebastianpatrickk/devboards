@@ -1,17 +1,10 @@
 import Link from "next/link";
-import { StarIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 
 const MarketingPage = () => {
   return (
     <section className="container flex max-w-6xl items-center justify-center gap-8 pb-8 pt-6 md:py-8 ">
       <section className="mx-auto flex w-full max-w-5xl flex-col items-center justify-center gap-4 py-12 text-center md:py-16">
-        <Badge variant="secondary" className="py-1.5">
-          <StarIcon className="mr-2 h-4 w-4" />
-          No 1 task managment
-        </Badge>
-
         <h1 className="text-balance text-3xl font-bold sm:text-5xl md:text-6xl">
           Portfolio app created using all the new in Next.js 14.
         </h1>
@@ -28,16 +21,6 @@ const MarketingPage = () => {
           </Button>
         </div>
       </section>
-
-      {/* <section
-        className="mx-auto flex w-full max-w-5xl flex-col items-center justify-center gap-16 pt-12 text-center md:pt-16"
-        id="features"
-      >
-        <div className="spce-y-4">
-          <h1 className="text-3xl font-bold sm:text-5xl md:text-6xl"></h1>
-          <p className=" max-w-3xl leading-normal text-muted-foreground sm:text-xl sm:leading-8"></p>
-        </div>
-      </section> */}
     </section>
   );
 };
