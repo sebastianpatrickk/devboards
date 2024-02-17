@@ -1,4 +1,5 @@
 export const siteConfig = {
   name: "Devboards",
-  description: "Collaborate, manage projects, and reach new productivity peaks",
+  description:
+    "Devboards is a trello like project management tool for developers.",
 };
