@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { ModeToggle } from "./mode-toggle";
 import Link from "next/link";
 
@@ -18,7 +17,7 @@ export const Footer = () => {
           the source code is available on{" "}
           <Link
             className="text-medium underline underline-offset-2"
-            href=""
+            href="https://github.com/sebastianpatrickk/devboards"
             target="_blank"
           >
             GitHub

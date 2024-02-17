@@ -17,7 +17,12 @@ const MarketingPage = () => {
             <Link href="/sign-up">Get started</Link>
           </Button>
           <Button variant="outline" size="lg" asChild>
-            <Link href="/sign-up">GitHub</Link>
+            <Link
+              href="https://github.com/sebastianpatrickk/devboards"
+              target="_blank"
+            >
+              GitHub
+            </Link>
           </Button>
         </div>
       </section>
