@@ -13,7 +13,7 @@ interface InfoProps {
 }
 
 export const Info = ({ isPro }: InfoProps) => {
-  const { organization, isLoaded } = useOrganization();
+  const { isLoaded } = useOrganization();
 
   if (!isLoaded) {
     return <Info.Skeleton />;
@@ -23,16 +23,15 @@ export const Info = ({ isPro }: InfoProps) => {
     <div className="flex flex-col gap-2">
       <div className="flex space-x-4">
         <h1 className="flex-1 text-2xl font-bold tracking-tighter md:text-3xl lg:leading-[1.1]">
-          {organization?.name}
+          Boards
         </h1>
         <CreateBoardDialog>
           <Button size="sm">Create Board</Button>
         </CreateBoardDialog>
       </div>
       <div className="flex items-center text-xs text-muted-foreground">
-        <CreditCard className="mr-1 h-4 w-4" />
         <p className="max-w-[750px] text-balance text-sm text-muted-foreground sm:text-base">
-          {isPro ? "Pro" : "Free"}
+          Manage your boards and create new ones.
         </p>
       </div>
     </div>
@@ -48,7 +47,7 @@ Info.Skeleton = function SkeletonInfo() {
         <Skeleton className="h-10 w-24" />
       </div>
       <div className="flex items-center text-xs text-muted-foreground">
-        <Skeleton className="h-6 w-14" />
+        <Skeleton className="h-6 w-72" />
       </div>
     </div>
   );

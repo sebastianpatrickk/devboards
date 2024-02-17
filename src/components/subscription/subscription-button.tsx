@@ -9,9 +9,13 @@ import { useProModal } from "@/hooks/use-pro-modal";
 
 interface SubscriptionButtonProps {
   isPro: boolean;
+  buttonText?: string;
 }
 
-export const SubscriptionButton = ({ isPro }: SubscriptionButtonProps) => {
+export const SubscriptionButton = ({
+  isPro,
+  buttonText,
+}: SubscriptionButtonProps) => {
   const proModal = useProModal();
 
   const { execute, isLoading } = useAction(stripeRedirect, {
@@ -32,8 +36,17 @@ export const SubscriptionButton = ({ isPro }: SubscriptionButtonProps) => {
   };
 
   return (
-    <Button variant="default" onClick={onClick} disabled={isLoading}>
-      {isPro ? "Manage subscription" : "Upgrade to pro"}
+    <Button
+      className="flex-1"
+      variant="default"
+      onClick={onClick}
+      disabled={isLoading}
+    >
+      {buttonText
+        ? buttonText
+        : isPro
+          ? "Manage subscription"
+          : "Upgrade to pro"}
     </Button>
   );
 };

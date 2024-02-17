@@ -8,6 +8,7 @@ import { db } from "@/lib/db";
 import { DataTable } from "@/components/activity/data-table";
 import { columns } from "@/components/activity/columns";
 import { generateLogMessage } from "@/lib/generate-log-message";
+import { PageInfo } from "@/components/page-info";
 
 const ActivityPage = async () => {
   const isPro = await checkSubscription();
@@ -38,7 +39,7 @@ const ActivityPage = async () => {
 
   return (
     <div className="container grid max-w-6xl items-center gap-8 pb-8 pt-6 md:py-8">
-      <Info isPro={isPro} />
+      <PageInfo title="Activity" description="Look at your team activity" />
       <DataTable columns={columns} data={auditLogs} />
     </div>
   );
