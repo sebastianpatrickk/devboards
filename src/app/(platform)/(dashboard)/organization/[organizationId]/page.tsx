@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { BoardList } from "@/components/board-list";
+import { BoardList } from "@/components/lists/board-list";
 import { Info } from "@/components/info";
 import { checkSubscription } from "@/lib/subscription";
 import { PlanInfo } from "@/components/plan-info";
