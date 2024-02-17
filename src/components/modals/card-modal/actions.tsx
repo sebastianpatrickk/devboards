@@ -66,11 +66,11 @@ export const Actions = ({ data }: ActionsProps) => {
 
   return (
     <div className="mt-2 space-y-2">
-      <p className="text-xs font-semibold">Actions</p>
+      <p className="text-xs font-semibold text-foreground">Actions</p>
       <Button
         onClick={onCopy}
         disabled={isLoadingCopy}
-        variant="default"
+        variant="outline"
         className="w-full justify-start"
         size="default"
       >
@@ -80,7 +80,7 @@ export const Actions = ({ data }: ActionsProps) => {
       <Button
         onClick={onDelete}
         disabled={isLoadingDelete}
-        variant="default"
+        variant="outline"
         className="w-full justify-start"
         size="default"
       >

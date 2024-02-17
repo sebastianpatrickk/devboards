@@ -68,7 +68,7 @@ export const BoardTitleForm = ({ data }: BoardTitleFormProps) => {
           id="title"
           onBlur={onBlur}
           defaultValue={title}
-          className="h-7 border-none bg-transparent px-[7px] py-1 text-lg font-bold focus-visible:outline-none focus-visible:ring-transparent"
+          className="h-7 border-none bg-card px-[7px] py-1 text-lg font-bold focus-visible:outline-none focus-visible:ring-transparent"
         />
       </form>
     );

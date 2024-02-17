@@ -77,9 +77,9 @@ export const Description = ({ data }: DescriptionProps) => {
 
   return (
     <div className="flex w-full items-start gap-x-3">
-      <AlignLeft className="mt-0.5 h-5 w-5 text-neutral-700" />
+      <AlignLeft className="mt-0.5 h-5 w-5 text-muted-foreground" />
       <div className="w-full">
-        <p className="mb-2 font-semibold text-neutral-700">Description</p>
+        <p className="mb-2 font-semibold text-foreground">Description</p>
         {isEditing ? (
           <form action={onSubmit} ref={formRef} className="space-y-2">
             <FormTextarea
@@ -106,7 +106,7 @@ export const Description = ({ data }: DescriptionProps) => {
           <div
             onClick={enableEditing}
             role="button"
-            className="min-h-[78px] rounded-md bg-neutral-200 px-3.5 py-3 text-sm font-medium"
+            className="min-h-[78px] rounded-md border border-border/40 px-3.5 py-3 text-sm font-medium"
           >
             {data.description || "Add a more detailed description..."}
           </div>

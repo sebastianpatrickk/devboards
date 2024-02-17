@@ -26,7 +26,7 @@ export const BoardList = async () => {
         <Link
           key={board.id}
           href={`/board/${board.id}`}
-          className="relative flex size-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-transparent text-card-foreground shadow transition-colors hover:bg-muted/50"
+          className="relative flex size-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-card text-card-foreground shadow transition-colors hover:bg-muted/50"
         >
           {/* <Image
             src={board.imageThumbUrl}

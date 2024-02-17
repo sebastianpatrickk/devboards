@@ -2,8 +2,6 @@ import { checkSubscription } from "@/lib/subscription";
 import { Separator } from "@/components/ui/separator";
 
 import { PlanInfo } from "@/components/plan-info";
-import { Info } from "@/components/info";
-import { SubscriptionButton } from "@/components/subscription/subscription-button";
 import { SubscriptionList } from "@/components/subscription/subscription-list";
 import { PageInfo } from "@/components/page-info";
 
