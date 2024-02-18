@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Devboards
 
-## Getting Started
+A developer-focused project management application inspired by Trello. Track tasks, organize projects, and collaborate with your team.
 
-First, run the development server:
+## Try it out
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Devboards has a live demo [here](https://devboards.vercel.app).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![Screenshot 2024-02-18 104945](https://github.com/sebastianpatrickk/devboards/assets/145474217/e356335c-782a-448b-971e-99c436ca1bbb)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Introduction
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Devboards is a web application inspired by Trello that is designed for developers. It allows you to:
 
-## Learn More
+- Create workspaces (organizations) for your team: Organize your work and share it with your colleagues.
+- Add boards, lists, and cards: Just like in Trello, you can organize your tasks into boards, sheets, and cards.
+- Track your team's activity with audit actions: See who did what and when.
 
-To learn more about Next.js, take a look at the following resources:
+## Inspiration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Devboards was created using [this tutorial](https://youtu.be/pRybm9lXW2c?si=_zkRXDfUQcooCCYa) in December, when I was learning Next.js 14. Now I'm trying to completely rework and improve the whole web application according to my own ideas.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Tech Stack
 
-## Deploy on Vercel
+- Framework: Next.js 14
+- Styling: TailwindCSS
+- UI Components: shadcn/ui
+- Database: Serverless Postgres on neon.tech
+- ORM: Prisma
+- Data fetching on client components: TanStack Query
+- Authentication: Clerk
+- Images API: Unsplash API
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Compatibility
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The web application is compatible with the latest versions of almost all browsers and is fully responsive. It also has the option to switch between dark and light modes, but some parts are not yet fully optimized for light mode.
+
+## Features list
+
+- [x] Authentication with Clerk
+- [x] ORM using Prisma
+- [x] Database on neon.tech
+- [x] Validation with Zod
+- [x] Adding and editing boards, lists, and tasks
+- [x] Audit actios
+- [x] Subscriptions using Stripe
+- [x] Responsive styles
+- [ ] Refactor some parts of the app from the tutorial.
+- [ ] Rebuild drag & drop feature with dnd kit
+- [ ] A better table for audit actions
+- [ ] Dark and light mode optimization
+- [ ] Refactor authentication middleware
+- [ ] Build a better marketing page
