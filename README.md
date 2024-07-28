@@ -16,10 +16,6 @@ Devboards is a web application inspired by Trello that is designed for developer
 - Add boards, lists, and cards: Just like in Trello, you can organize your tasks into boards, sheets, and cards.
 - Track your team's activity with audit actions: See who did what and when.
 
-## Inspiration
-
-Devboards was created using [this tutorial](https://youtu.be/pRybm9lXW2c?si=_zkRXDfUQcooCCYa) in December, when I was learning Next.js 14. Now I'm trying to completely rework and improve the whole web application according to my own ideas.
-
 ## Tech Stack
 
 - Framework: Next.js 14
@@ -45,9 +41,3 @@ The web application is compatible with the latest versions of almost all browser
 - [x] Audit actios
 - [x] Subscriptions using Stripe
 - [x] Responsive styles
-- [ ] Refactor some parts of the app from the tutorial.
-- [ ] Rebuild drag & drop feature with dnd kit
-- [ ] A better table for audit actions
-- [ ] Dark and light mode optimization
-- [ ] Refactor authentication middleware
-- [ ] Build a better marketing page
